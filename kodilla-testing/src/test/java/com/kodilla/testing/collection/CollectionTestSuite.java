@@ -24,9 +24,9 @@ public class CollectionTestSuite {
         ArrayList<Integer> emptyList = new ArrayList<Integer>();
         //When
         OddNumbersExterminator tester = new OddNumbersExterminator();
-        tester.exterminate(emptyList);
+        ArrayList<Integer> result = tester.exterminate(emptyList);
         // Assert
-        Assert.assertEquals(null, emptyList);
+        Assert.assertEquals(null, result);
     }
 
     @Test
@@ -44,8 +44,8 @@ public class CollectionTestSuite {
             }
         }
         OddNumbersExterminator tester = new OddNumbersExterminator();
-        tester.exterminate(normalList);
+        ArrayList<Integer> test = tester.exterminate(normalList);
         //Assert
-        Assert.assertEquals(normalList, result);
+        Assert.assertEquals(test, result);
     }
 }
