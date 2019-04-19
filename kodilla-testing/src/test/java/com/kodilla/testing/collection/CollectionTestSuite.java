@@ -5,6 +5,7 @@ import org.junit.*;
 import org.junit.Assert;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CollectionTestSuite {
 
@@ -24,7 +25,7 @@ public class CollectionTestSuite {
         ArrayList<Integer> emptyList = new ArrayList<Integer>();
         //When
         OddNumbersExterminator tester = new OddNumbersExterminator();
-        ArrayList<Integer> result = tester.exterminate(emptyList);
+        List<Integer> result = tester.exterminate(emptyList);
         // Assert
         Assert.assertTrue(result.isEmpty());
     }
@@ -45,7 +46,7 @@ public class CollectionTestSuite {
         result.add(10);
 
         OddNumbersExterminator tester = new OddNumbersExterminator();
-        ArrayList<Integer> test = tester.exterminate(normalList);
+        List<Integer> test = tester.exterminate(normalList);
         //Assert
         Assert.assertEquals(test, result);
     }
