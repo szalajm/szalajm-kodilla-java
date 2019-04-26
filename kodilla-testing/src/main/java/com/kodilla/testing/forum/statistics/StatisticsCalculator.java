@@ -1,32 +1,13 @@
 package com.kodilla.testing.forum.statistics;
 
 public class StatisticsCalculator {
-    Statistics statistics;
 
-    double numberOfUsers;
-    double postsQuantity;
-    double commentsQuantity;
+
     double averagePostsPerUser;
     double averageCommentsPerUser;
     double averageCommentsPerPost;
 
-
-    public StatisticsCalculator(Statistics statistics) {
-    }
-
-    public double getNumberOfUsers() {
-        return numberOfUsers;
-    }
-
-    public double getPostsQuantity() {
-        return postsQuantity;
-    }
-
-    public double getCommentsQuantity() {
-        return commentsQuantity;
-    }
-
-    public double getAveragePostsPerUser() {
+    public double getAveragePostsPerUser(){
         return averagePostsPerUser;
     }
 
@@ -39,11 +20,20 @@ public class StatisticsCalculator {
     }
 
     public void calculateAdvStatistics(Statistics statistics) {
-        double numberOfUsers = statistics.usersNames().size();
-        double postsQuantity = statistics.postsCount();
-        double commentsQuantity = statistics.commentsCount();
-        double averagePostsPerUser = statistics.postsCount() / statistics.usersNames().size();
-        double averageCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
-        double averageCommentsPerPost = statistics.commentsCount() / statistics.postsCount();
+        if(statistics.usersNames().size() > 0){
+            averagePostsPerUser = statistics.postsCount() / statistics.usersNames().size();
+        } else {
+            averagePostsPerUser = 0;
+        }
+        if(statistics.usersNames().size() > 0) {
+            averageCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
+        } else {
+            averageCommentsPerUser = 0;
+        }
+        if(statistics.postsCount() > 0) {
+            averageCommentsPerPost =  statistics.commentsCount() / (double)statistics.postsCount();
+        } else {
+            averageCommentsPerPost = 0;
+        }
     }
 }
