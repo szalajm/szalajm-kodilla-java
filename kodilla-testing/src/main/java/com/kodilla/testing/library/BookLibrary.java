@@ -22,10 +22,17 @@ public class BookLibrary {
     }
 
     public List<Book> listBooksInHandsOf (LibraryUser libraryUser) {
-        List<Book> bookList = new ArrayList<>();
-        Book book = new Book("Book title", "Book author", 2019);
-        bookList.add(book);
+        List<Book> resultList = libraryDatabase.listBooksInHandsOf(libraryUser);
+        if(resultList.size() == 0){
+            System.out.println("No books borrowed");
+        }
+        if(resultList.size() > 0 && resultList.size()<5){
+            System.out.println("Another can be borrowed");
+        }
+        if(resultList.size() >= 5) {
+            System.out.println("Limit exceeded: Return books You have borrowed");
+        }
 
-        return bookList;
+        return resultList;
     }
 }
