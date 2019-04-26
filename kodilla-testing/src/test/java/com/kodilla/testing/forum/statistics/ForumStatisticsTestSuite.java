@@ -58,8 +58,8 @@ public class ForumStatisticsTestSuite {
         double averagePostsNumber = statisticsCalculator.getAveragePostsPerUser();
 
         //Then
-        Assert.assertEquals(15, averageCommentsNumber, 0.01);
-        Assert.assertEquals(10, averagePostsNumber, 0.01);
+        Assert.assertEquals(15, averageCommentsNumber, 0.2);
+        Assert.assertEquals(10, averagePostsNumber, 0.2);
 
     }
 
@@ -179,8 +179,8 @@ public class ForumStatisticsTestSuite {
         double averagePostPerUser = statisticsCalculator.getAveragePostsPerUser();
 
         //Then
-        Assert.assertEquals(1, averagePostNumber, 0.01);
-        Assert.assertEquals(10, averagePostPerUser, 0.01);
+        Assert.assertEquals(1, averagePostNumber, 0.2);
+        Assert.assertEquals(10, averagePostPerUser, 0.2);
     }
 
     }

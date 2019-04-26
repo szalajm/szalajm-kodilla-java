@@ -21,12 +21,12 @@ public class StatisticsCalculator {
 
     public void calculateAdvStatistics(Statistics statistics) {
         if(statistics.usersNames().size() > 0){
-            averagePostsPerUser = statistics.postsCount() / statistics.usersNames().size();
+            averagePostsPerUser = statistics.postsCount() / (double)statistics.usersNames().size();
         } else {
             averagePostsPerUser = 0;
         }
         if(statistics.usersNames().size() > 0) {
-            averageCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
+            averageCommentsPerUser = statistics.commentsCount() / (double)statistics.usersNames().size();
         } else {
             averageCommentsPerUser = 0;
         }

@@ -103,6 +103,19 @@ public class BookDirectoryTestSuite {
         LibraryUser userOne = new LibraryUser("one", "book", "in hands of");
         LibraryUser userFive = new LibraryUser("five", "books", "in hands of");
 
+        when(libraryDatabaseMock.listBooksInHandsOf(userZero)).thenReturn(resultListOfZeroBook);
+        when(libraryDatabaseMock.listBooksInHandsOf(userOne)).thenReturn(resultListOfOneBook);
+        when(libraryDatabaseMock.listBooksInHandsOf(userFive)).thenReturn((resultListOfFiveBooks));
+
+        //When
+        List<Book> theListOfBook0 = bookLibrary.listBooksInHandsOf(userZero);
+        List<Book> theListOfBook1 = bookLibrary.listBooksInHandsOf(userOne);
+        List<Book> theListOfBook5 = bookLibrary.listBooksInHandsOf(userFive);
+
+        //Then
+        assertEquals(0, theListOfBook0.size());
+        assertEquals(1, theListOfBook1.size());
+        assertEquals(5, theListOfBook5.size());
 
     }
     }
