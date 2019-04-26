@@ -91,7 +91,7 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksInHandsOg(){
+    public void testListBooksInHandsOf(){
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -102,7 +102,7 @@ public class BookDirectoryTestSuite {
         LibraryUser userZero = new LibraryUser("zero", "books", "in hand of");
         LibraryUser userOne = new LibraryUser("one", "book", "in hands of");
         LibraryUser userFive = new LibraryUser("five", "books", "in hands of");
-
+""
         when(libraryDatabaseMock.listBooksInHandsOf(userZero)).thenReturn(resultListOfZeroBook);
         when(libraryDatabaseMock.listBooksInHandsOf(userOne)).thenReturn(resultListOfOneBook);
         when(libraryDatabaseMock.listBooksInHandsOf(userFive)).thenReturn((resultListOfFiveBooks));
