@@ -76,7 +76,7 @@ public class ShapeCollectorTestSuite {
 
             //Then
             Assert.assertTrue(result);
-            Assert.assertEquals(0, shapeCollector.getList().size());
+            Assert.assertEquals(1, shapeCollector.getList().size(),0.01);
         }
 
 
@@ -132,33 +132,6 @@ public class ShapeCollectorTestSuite {
             //Then
             Assert.assertNull(retrievedShape);
         }
-
-        @Test
-        public void testShowFigure(Object shapeName) {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-            Shape circle = new Circle(20);
-            shapeCollector.addFigure(circle);
-
-            //When
-            shapeName = circle.getShapeName();
-            //Then
-            Assert.assertEquals(shapeName, "This is circle");
-        }
-
-
-        @Test
-        public void testShowFigureNotExisting(){
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-            Shape circle = new Circle(100);
-
-            //When
-            Object shapeName = circle.getShapeName();
-            //Then
-            Assert.assertNull(shapeName);
-        }
-
     }
 
 
