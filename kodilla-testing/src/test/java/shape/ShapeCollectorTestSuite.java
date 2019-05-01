@@ -4,11 +4,11 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 
-import com.kodilla.testing.shape.Shape;
-import com.kodilla.testing.shape.Circle;
-import com.kodilla.testing.shape.ShapeCollector;
-import com.kodilla.testing.shape.Square;
-import com.kodilla.testing.shape.Triangle;
+import com.kodilla.stream.testing.shape.Shape;
+import com.kodilla.stream.testing.shape.Circle;
+import com.kodilla.stream.testing.shape.ShapeCollector;
+import com.kodilla.stream.testing.shape.Square;
+import com.kodilla.stream.testing.shape.Triangle;
 
 import org.junit.*;
 
