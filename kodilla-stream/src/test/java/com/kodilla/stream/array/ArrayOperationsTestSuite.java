@@ -6,6 +6,19 @@ import org.junit.Test;
 public class ArrayOperationsTestSuite  {
 
     @Test
+    public void testEmptyList() {
+        //Given
+        int[] set = new int[0];
+
+        //When
+        double theAverage = ArrayOperations.getAverage(set);
+
+        //Then
+        Assert.assertEquals(0, theAverage, 0.01);
+
+    }
+
+    @Test
     public void testGetAverage () {
         //Given
         int[] set = new int[10];
@@ -25,10 +38,5 @@ public class ArrayOperationsTestSuite  {
 
         //Then
         Assert.assertEquals(15, theAverage, 0.1);
-
-
-
-
-
     }
 }
