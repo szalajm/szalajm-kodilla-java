@@ -12,11 +12,13 @@ public class FlightSearch {
         Flight destination2 = new Flight("Poznań", "Radom");
         Flight destination3 = new Flight("Olsztyn", "Wrocław");
 
-        flightMap.put(destination1.getArrivalAirport(), Boolean.TRUE);
-        flightMap.put(destination2.getArrivalAirport(), Boolean.FALSE);
-        flightMap.put(destination3.getArrivalAirport(), Boolean.TRUE);
+        flightMap.put(destination1.getDepartureAirport(), Boolean.FALSE);
+        flightMap.put(destination2.getDepartureAirport(), Boolean.FALSE);
+        flightMap.put(destination3.getDepartureAirport(), Boolean.TRUE);
 
-        if(flightMap.containsKey(flight.getDepartureAirport())){
+
+
+        if(flightMap.containsKey(flight.getDepartureAirport())&& flightMap.get(flight.getDepartureAirport())){
             System.out.println("Destination available");
         } else {
             throw new RouteNotFoundException("Destination not found");
