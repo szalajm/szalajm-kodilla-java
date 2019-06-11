@@ -8,6 +8,7 @@ public class SaleServiceImplemented implements SaleService {
     @Override
     public boolean sale(Customer customer, Product product, Delivery delivery) {
 
-        return delivery.getDeliveryForm()== "InPost";
+        String InPostConfiirmed = new String("InPost");
+        return delivery.getDeliveryForm().equals(InPostConfiirmed);
     }
 }
