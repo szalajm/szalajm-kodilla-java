@@ -12,10 +12,10 @@ public class ScheduleOperator {
         this.schedule = schedule;
     }
 
-    public List<Flight> getDirectFlights(String startingAirport, String destinationAirport) {
+    public List<Flight> getFlights(String startingAirport, String destinationAirport) {
         List<Flight> resultList =
                 schedule.stream()
-                        .filter(e -> e.getStartingAirport().equals(startingAirport) && e.getDestinationAirport().equals(destinationAirport) && e.getTransferAirport().equals("NONE"))
+                        .filter(e -> e.getStartingAirport().equals(startingAirport) && e.getDestinationAirport().equals(destinationAirport))
                         .collect(Collectors.toList());
 
         System.out.println("We have identified a list of " + resultList.size() + " suitable flights");
@@ -26,18 +26,6 @@ public class ScheduleOperator {
 
     }
 
-    public List<Flight> getIndirectFlights (String startingAirport, String destinationAirport) {
-        List<Flight> resultList =
-                schedule.stream()
-                .filter(e -> e.getStartingAirport().equals(startingAirport) && e.getDestinationAirport().equals(destinationAirport) && !e.getTransferAirport().equals("NONE"))
-                .collect(Collectors.toList());
-
-        System.out.println("We have identified a list of " + resultList.size() + " suitable flights");
-        resultList.stream()
-                .forEach(System.out::println);
-
-        return resultList;
-    }
 }
 
 

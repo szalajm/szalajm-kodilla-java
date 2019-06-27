@@ -7,13 +7,12 @@ public class Flight {
     private final Integer flightNumber;
     private final String startingAirport;
     private final String destinationAirport;
-    private final String transferAirport;
 
-    public Flight(final Integer flightNumber, final String startingAirport, final String destinationAirport, final String transferAirport) {
+
+    public Flight(final Integer flightNumber, final String startingAirport, final String destinationAirport) {
         this.flightNumber = flightNumber;
         this.startingAirport = startingAirport;
         this.destinationAirport = destinationAirport;
-        this.transferAirport = transferAirport;
     }
 
     public Integer getFlightNumber() {
@@ -28,9 +27,6 @@ public class Flight {
         return destinationAirport;
     }
 
-    public String getTransferAirport() {
-        return transferAirport;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -39,13 +35,12 @@ public class Flight {
         Flight flight = (Flight) o;
         return Objects.equals(flightNumber, flight.flightNumber) &&
                 Objects.equals(startingAirport, flight.startingAirport) &&
-                Objects.equals(destinationAirport, flight.destinationAirport) &&
-                Objects.equals(transferAirport, flight.transferAirport);
+                Objects.equals(destinationAirport, flight.destinationAirport);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(flightNumber, startingAirport, destinationAirport, transferAirport);
+        return Objects.hash(flightNumber, startingAirport, destinationAirport);
     }
 
     @Override
@@ -54,7 +49,6 @@ public class Flight {
                 "flightNumber=" + flightNumber +
                 ", startingAirport='" + startingAirport + '\'' +
                 ", destinationAirport='" + destinationAirport + '\'' +
-                ", transferAirport='" + transferAirport + '\'' +
                 '}';
     }
 }
