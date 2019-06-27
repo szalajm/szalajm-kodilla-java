@@ -1,4 +1,6 @@
 package com.kodilla.spring.com.kodilla.spring.shape;
 
-public class Shape {
+public interface Shape {
+
+    String getShapeName();
 }

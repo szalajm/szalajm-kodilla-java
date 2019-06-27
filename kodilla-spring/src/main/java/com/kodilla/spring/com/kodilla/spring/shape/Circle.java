@@ -1,4 +1,10 @@
 package com.kodilla.spring.com.kodilla.spring.shape;
+import org.springframework.stereotype.Component;
 
-public class Circle {
+@Component
+public class Circle implements Shape {
+    @Override
+    public String getShapeName() {
+        return "This is a circle.";
+    }
 }
