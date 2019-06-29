@@ -1,8 +1,9 @@
 package com.kodilla.spring.portfolio;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+
+@Component
 public class Board {
 
     private TaskList toDoList;
