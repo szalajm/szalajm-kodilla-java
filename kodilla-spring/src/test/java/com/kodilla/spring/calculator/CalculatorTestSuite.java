@@ -60,14 +60,14 @@ public class CalculatorTestSuite {
     public void testDivMethod() {
 
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext("dom.kodilla.spring.calculator");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.calculator");
         Calculator calculator = context.getBean(Calculator.class);
 
         //When
         Double result = calculator.div(10,5);
 
         //Then
-        Assert.assertEquals(1, result, 0.01);
+        Assert.assertEquals(2, result, 0.01);
     }
 
 }
