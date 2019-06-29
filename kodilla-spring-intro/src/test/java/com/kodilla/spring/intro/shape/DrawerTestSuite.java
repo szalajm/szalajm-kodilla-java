@@ -1,15 +1,33 @@
+package com.kodilla.spring.intro.shape;
+
 import com.kodilla.spring.intro.shape.Drawer;
 
+import org.junit.Assert;
 import org.junit.Test;
 
+
 public class DrawerTestSuite {
-    public void testDoDrawing() {
+
+    @Test
+    public void testDoDrawingWithCircle() {
         //Given
-        Drawer drawer = new Drawer();
+        Circle circle = new Circle();
         //When
-        drawer.doDrawing();
+        Drawer drawer = new Drawer(circle);
+        String result = drawer.doDrawing();
         //Then
-        //do nothing
+        Assert.assertEquals("This is a circle", result);
+    }
+
+    @Test
+    public void testDoDrawingWithTriangle() {
+        //Given
+        Triangle triangle = new Triangle();
+        //When
+        Drawer drawer = new Drawer(triangle);
+        String result = drawer.doDrawing();
+        //Then
+        Assert.assertEquals("This is a triangle", result);
     }
 }
 
