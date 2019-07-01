@@ -16,7 +16,7 @@ public class OrderProcessorHealthyShop implements OrderProcessor {
     public OrderDto process(OrderRequest orderRequest) {
         boolean isOrdered = orderService.order(orderRequest.getProvider(), orderRequest.getProduct());
 
-        if(isOrdered){
+        if (isOrdered) {
             informationServiceAccepted.inform();
             return new OrderDto(orderRequest.getProvider(), true);
         } else {

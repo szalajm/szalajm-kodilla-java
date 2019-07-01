@@ -2,6 +2,7 @@ package com.kodilla.stream.portfolio;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.time.Period;
@@ -154,12 +155,12 @@ public class BoardTestSuite {
         double workingTime = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .mapToLong(t -> DAYS.between(t.getCreated(),LocalDate.now()))
+                .mapToLong(t -> DAYS.between(t.getCreated(), LocalDate.now()))
                 .average()
                 .getAsDouble();
 
         //Then
-        Assert.assertEquals(10,workingTime, 0.01);
+        Assert.assertEquals(10, workingTime, 0.01);
 
     }
 }

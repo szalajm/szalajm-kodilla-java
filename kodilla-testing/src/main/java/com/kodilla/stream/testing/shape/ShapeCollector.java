@@ -11,7 +11,7 @@ public class ShapeCollector {
         return shapes;
     }
 
-    public void addFigure(Shape shape){
+    public void addFigure(Shape shape) {
         shapes.add(shape);
     }
 
@@ -26,22 +26,22 @@ public class ShapeCollector {
 
     public Shape getFigure(int figureNumber) {
         Shape theFigure = null;
-        if(figureNumber >= 0 && figureNumber < shapes.size()){
+        if (figureNumber >= 0 && figureNumber < shapes.size()) {
             theFigure = shapes.get(figureNumber);
         }
         return theFigure;
     }
 
-    public void showFigure (int figureNumber){
+    public void showFigure(int figureNumber) {
         Shape theFigure = null;
-        if(figureNumber >= 0 && figureNumber < shapes.size()){
+        if (figureNumber >= 0 && figureNumber < shapes.size()) {
             theFigure = shapes.get(figureNumber);
         }
 
         theFigure.getShapeName();
     }
 
-    public int getFiguresQuantity(){
+    public int getFiguresQuantity() {
         return shapes.size();
     }
 }

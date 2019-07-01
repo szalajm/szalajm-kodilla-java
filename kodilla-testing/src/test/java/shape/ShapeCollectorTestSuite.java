@@ -65,74 +65,74 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-        public void testRemoveFigure () {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-            Shape triangle = new Triangle(100, 30);
-            shapeCollector.addFigure(triangle);
+    public void testRemoveFigure() {
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Shape triangle = new Triangle(100, 30);
+        shapeCollector.addFigure(triangle);
 
-            //When
-            boolean result = shapeCollector.removeFigure(triangle);
+        //When
+        boolean result = shapeCollector.removeFigure(triangle);
 
-            //Then
-            Assert.assertTrue(result);
-            Assert.assertEquals(1, shapeCollector.getList().size(),0.01);
-        }
+        //Then
+        Assert.assertTrue(result);
+        Assert.assertEquals(1, shapeCollector.getList().size(), 0.01);
+    }
 
 
-        @Test
-        public void testGetFigure () {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-            Shape circle = new Circle(20);
-            shapeCollector.addFigure(circle);
+    @Test
+    public void testGetFigure() {
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Shape circle = new Circle(20);
+        shapeCollector.addFigure(circle);
 
-            //When
-            Shape retrievedShape = shapeCollector.getFigure(0);
+        //When
+        Shape retrievedShape = shapeCollector.getFigure(0);
 
-            //Then
-            Assert.assertEquals(circle, retrievedShape);
-        }
+        //Then
+        Assert.assertEquals(circle, retrievedShape);
+    }
 
-        @Test
-        public void testGetFigureNotExisting () {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-            Shape circle = new Circle(20);
+    @Test
+    public void testGetFigureNotExisting() {
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Shape circle = new Circle(20);
 
-            //When
-            Shape retrievedShape = shapeCollector.getFigure(0);
+        //When
+        Shape retrievedShape = shapeCollector.getFigure(0);
 
-            //Then
-            Assert.assertNull(retrievedShape);
-        }
+        //Then
+        Assert.assertNull(retrievedShape);
+    }
 
-        @Test
-        public void testGetFigureNegativeIndex () {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-            Shape circle = new Circle(20);
+    @Test
+    public void testGetFigureNegativeIndex() {
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Shape circle = new Circle(20);
 
-            //When
-            Shape retrievedShape = shapeCollector.getFigure(-1);
+        //When
+        Shape retrievedShape = shapeCollector.getFigure(-1);
 
-            //Then
-            Assert.assertNull(retrievedShape);
-        }
+        //Then
+        Assert.assertNull(retrievedShape);
+    }
 
-        @Test
-        public void testGetFigureUnavailableIndex () {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-            Shape circle = new Circle(20);
+    @Test
+    public void testGetFigureUnavailableIndex() {
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Shape circle = new Circle(20);
 
-            //When
+        //When
         Shape retrievedShape = shapeCollector.getFigure(1);
 
-            //Then
-            Assert.assertNull(retrievedShape);
-        }
+        //Then
+        Assert.assertNull(retrievedShape);
     }
+}
 
 
 

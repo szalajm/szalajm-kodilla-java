@@ -7,7 +7,7 @@ public class StatisticsCalculator {
     double averageCommentsPerUser;
     double averageCommentsPerPost;
 
-    public double getAveragePostsPerUser(){
+    public double getAveragePostsPerUser() {
         return averagePostsPerUser;
     }
 
@@ -20,18 +20,18 @@ public class StatisticsCalculator {
     }
 
     public void calculateAdvStatistics(Statistics statistics) {
-        if(statistics.usersNames().size() > 0){
-            averagePostsPerUser = statistics.postsCount() / (double)statistics.usersNames().size();
+        if (statistics.usersNames().size() > 0) {
+            averagePostsPerUser = statistics.postsCount() / (double) statistics.usersNames().size();
         } else {
             averagePostsPerUser = 0;
         }
-        if(statistics.usersNames().size() > 0) {
-            averageCommentsPerUser = statistics.commentsCount() / (double)statistics.usersNames().size();
+        if (statistics.usersNames().size() > 0) {
+            averageCommentsPerUser = statistics.commentsCount() / (double) statistics.usersNames().size();
         } else {
             averageCommentsPerUser = 0;
         }
-        if(statistics.postsCount() > 0) {
-            averageCommentsPerPost =  statistics.commentsCount() / (double)statistics.postsCount();
+        if (statistics.postsCount() > 0) {
+            averageCommentsPerPost = statistics.commentsCount() / (double) statistics.postsCount();
         } else {
             averageCommentsPerPost = 0;
         }

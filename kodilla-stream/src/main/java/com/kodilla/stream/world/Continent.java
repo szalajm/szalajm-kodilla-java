@@ -10,9 +10,9 @@ public final class Continent {
         countries.add(country);
     }
 
-    public Set<Country> getCountries(){
+    public Set<Country> getCountries() {
         return countries;
     }
-    }
+}
 
 

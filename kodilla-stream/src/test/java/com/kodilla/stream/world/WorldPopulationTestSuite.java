@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public class WorldPopulationTestSuite {
     @Test
-    public void testGetPeopleQuantity (){
+    public void testGetPeopleQuantity() {
         //Given
         World worldPopulation = new World();
 

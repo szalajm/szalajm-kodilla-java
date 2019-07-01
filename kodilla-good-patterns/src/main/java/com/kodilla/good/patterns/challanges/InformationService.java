@@ -2,5 +2,5 @@ package com.kodilla.good.patterns.challanges;
 
 public interface InformationService {
 
-    public void inform ();
+    public void inform();
 }

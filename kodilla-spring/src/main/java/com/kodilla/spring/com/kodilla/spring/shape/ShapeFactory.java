@@ -9,7 +9,7 @@ import java.util.Random;
 public class ShapeFactory {
 
     @Bean
-    public Square createSquare(){
+    public Square createSquare() {
         return new Square();
     }
 
@@ -20,7 +20,7 @@ public class ShapeFactory {
         Random generator = new Random();
         int chosen = generator.nextInt(3);
 
-        if(chosen == 0) {
+        if (chosen == 0) {
             theShape = new Triangle();
         } else if (chosen == 1) {
             theShape = new Circle();

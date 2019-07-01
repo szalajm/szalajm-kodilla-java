@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.challanges.com.kodilla.good.patterns.challenge
 import com.sun.org.apache.xpath.internal.operations.Or;
 
 public class Application {
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         OrderRequestRetriever orderRequestRetriever = new OrderRequestRetriever();
         OrderRequest orderExtraFoodShop = orderRequestRetriever.retrieveExtraFoodShop();

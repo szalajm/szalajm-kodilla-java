@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public  final class ForumUser {
+public final class ForumUser {
     private final String username;
     private final String realName;
     private final String location;
@@ -60,7 +60,7 @@ public  final class ForumUser {
                 .collect(Collectors.toSet());
     }
 
-    public Set<String> getLocationsOfFriendsofFriends(){
+    public Set<String> getLocationsOfFriendsofFriends() {
         return friends.stream()
                 .flatMap(user -> user.getFriends().stream())
                 .filter(user -> user != this)

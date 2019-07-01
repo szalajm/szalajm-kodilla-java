@@ -27,23 +27,23 @@ public class ScheduleOperator {
     }
 
 
-public List<Flight> getIndirectFlights (String startingAirport, String destinationAirport) {
+    public List<Flight> getIndirectFlights(String startingAirport, String destinationAirport) {
         List<Flight> resultListStart =
                 schedule.stream()
-                .filter(e -> e.getStartingAirport().equals(startingAirport))
-                .collect(Collectors.toList());
+                        .filter(e -> e.getStartingAirport().equals(startingAirport))
+                        .collect(Collectors.toList());
 
 
         List<Flight> resultListDestination =
                 schedule.stream()
-                .filter(e -> e.getDestinationAirport().equals(destinationAirport))
-                .collect(Collectors.toList());
+                        .filter(e -> e.getDestinationAirport().equals(destinationAirport))
+                        .collect(Collectors.toList());
 
         List<Flight> flightList = new ArrayList<Flight>();
 
-        for(Flight flight: resultListStart) {
-            for (Flight flightB: resultListDestination) {
-                if(flight.getDestinationAirport().equals(flightB.getStartingAirport())){
+        for (Flight flight : resultListStart) {
+            for (Flight flightB : resultListDestination) {
+                if (flight.getDestinationAirport().equals(flightB.getStartingAirport())) {
                     flightList.add(flight);
                     flightList.add(flightB);
                 }
@@ -52,12 +52,12 @@ public List<Flight> getIndirectFlights (String startingAirport, String destinati
 
             System.out.println("We have identified:" + flightList.size() + "Suitable flight");
             flightList.stream()
-                    .forEach(System.out:: println);
+                    .forEach(System.out::println);
 
-    }
+        }
 
         return flightList;
 
-}
+    }
 }
 

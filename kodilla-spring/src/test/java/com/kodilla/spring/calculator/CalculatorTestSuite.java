@@ -20,7 +20,7 @@ public class CalculatorTestSuite {
         Calculator calculator = context.getBean(Calculator.class);
 
         //When
-        Double result = calculator.add(2,2);
+        Double result = calculator.add(2, 2);
 
         //Then
         Assert.assertEquals(4, result, 0.01);
@@ -35,7 +35,7 @@ public class CalculatorTestSuite {
         Calculator calculator = context.getBean(Calculator.class);
 
         //When
-        Double result = calculator.sub(2,2);
+        Double result = calculator.sub(2, 2);
 
         //Then
         Assert.assertEquals(0, 0, 0.01);
@@ -64,7 +64,7 @@ public class CalculatorTestSuite {
         Calculator calculator = context.getBean(Calculator.class);
 
         //When
-        Double result = calculator.div(10,5);
+        Double result = calculator.div(10, 5);
 
         //Then
         Assert.assertEquals(2, result, 0.01);

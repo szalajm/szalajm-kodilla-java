@@ -12,10 +12,10 @@ public class ProductOrderService {
         this.saleRepository = saleRepository;
     }
 
-    public SaleDto process (final SaleRequest saleRequest){
+    public SaleDto process(final SaleRequest saleRequest) {
         boolean isSold = saleService.sale(saleRequest.getCustomer(), saleRequest.getProduct(), saleRequest.getDelivery());
 
-        if(isSold) {
+        if (isSold) {
             informationService.inform();
             saleRepository.createSale(saleRequest.getCustomer(), saleRequest.getProduct());
             return new SaleDto(saleRequest.getCustomer(), true);

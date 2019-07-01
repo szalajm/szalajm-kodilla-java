@@ -9,11 +9,11 @@ public class OddNumbersExterminator {
         List<Integer> evenNumbers = new ArrayList<Integer>();
 
         for (Integer number : numbers) {
-            if((number % 2) == 0) {
+            if ((number % 2) == 0) {
                 evenNumbers.add(number);
             }
-            }
-        return evenNumbers;
         }
+        return evenNumbers;
     }
+}
 

@@ -8,11 +8,11 @@ import java.util.stream.Collectors;
 public final class World {
     Set<Continent> continents = new HashSet<>();
 
-    public Set<Continent> getContinents (){
+    public Set<Continent> getContinents() {
         return continents;
     }
 
-    public void addContinent (Continent continent) {
+    public void addContinent(Continent continent) {
         continents.add(continent);
     }
 

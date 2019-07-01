@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class SaleRequestRetriever {
 
-    public SaleRequest retrieve () {
+    public SaleRequest retrieve() {
 
         Customer customer = new Customer("Marian Koniuszko");
         Product product = new Product("Wykałaczki gumowe");

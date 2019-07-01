@@ -5,7 +5,7 @@ public class OrderServiceHealthyShop implements OrderService {
     public OrderServiceHealthyShop() {
     }
 
-    public boolean order (Provider provider, Product product) {
+    public boolean order(Provider provider, Product product) {
         return product.getQuantity() <= 10;
     }
 }

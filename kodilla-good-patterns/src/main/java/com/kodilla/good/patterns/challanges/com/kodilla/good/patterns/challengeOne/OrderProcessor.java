@@ -4,5 +4,5 @@ public interface OrderProcessor {
 
     public OrderDto process(OrderRequest orderRequest);
 
-    }
+}
 

@@ -3,7 +3,7 @@ package com.kodilla.stream.array;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ArrayOperationsTestSuite  {
+public class ArrayOperationsTestSuite {
 
     @Test
     public void testEmptyList() {
@@ -19,7 +19,7 @@ public class ArrayOperationsTestSuite  {
     }
 
     @Test
-    public void testGetAverage () {
+    public void testGetAverage() {
         //Given
         int[] set = new int[10];
         set[0] = 10;

@@ -6,14 +6,14 @@ public class FunctionalBeutifier {
     }
 
     public static String convertToLowerCase(String poem) {
-    return poem.toLowerCase();
+        return poem.toLowerCase();
     }
 
-    public static String onePoemOneWord (String poem){
+    public static String onePoemOneWord(String poem) {
         return poem.trim();
     }
 
-    public static String onlyUs (String poem){
+    public static String onlyUs(String poem) {
         return poem.valueOf("u");
     }
 }

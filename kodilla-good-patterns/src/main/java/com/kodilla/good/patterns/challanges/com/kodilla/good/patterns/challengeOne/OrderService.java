@@ -2,5 +2,5 @@ package com.kodilla.good.patterns.challanges.com.kodilla.good.patterns.challenge
 
 public interface OrderService {
 
-    public boolean order (Provider provider, Product product);
+    public boolean order(Provider provider, Product product);
 }

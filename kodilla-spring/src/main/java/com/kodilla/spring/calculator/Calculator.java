@@ -9,7 +9,7 @@ public class Calculator {
     @Autowired
     private Display display;
 
-    public Calculator (final Display display) {
+    public Calculator(final Display display) {
         this.display = display;
     }
 
@@ -21,14 +21,14 @@ public class Calculator {
     }
 
     public Double sub(double a, double b) {
-        Double val = a-b;
+        Double val = a - b;
 
         display.displayValue(val);
         return val;
     }
 
     public Double mul(double a, double b) {
-        Double val = a*b;
+        Double val = a * b;
 
         display.displayValue(val);
         return val;

@@ -18,8 +18,8 @@ public class ForumStatisticsTestSuite {
         int testPostCount = 1000;
         int testCommentCount = 1500;
         when(statisticsMock.usersNames()).thenReturn(testList);
-        when(statisticsMock.postsCount()). thenReturn(testPostCount);
-        when(statisticsMock.commentsCount()). thenReturn(testCommentCount);
+        when(statisticsMock.postsCount()).thenReturn(testPostCount);
+        when(statisticsMock.commentsCount()).thenReturn(testCommentCount);
 
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
 
@@ -29,7 +29,7 @@ public class ForumStatisticsTestSuite {
         double averagePostsNumber = statisticsCalculator.getAveragePostsPerUser();
 
         //Then
-        Assert.assertEquals(0, averageCommentsNumber,0.01);
+        Assert.assertEquals(0, averageCommentsNumber, 0.01);
         Assert.assertEquals(0, averagePostsNumber, 0.01);
     }
 
@@ -38,14 +38,14 @@ public class ForumStatisticsTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> testList = new ArrayList<String>();
-        for(int n=1; n<100; n++){
+        for (int n = 1; n < 100; n++) {
             testList.add("userName");
         }
         int testPostCount = 1000;
         int testCommentCount = 1500;
         when(statisticsMock.usersNames()).thenReturn(testList);
-        when(statisticsMock.postsCount()). thenReturn(testPostCount);
-        when(statisticsMock.commentsCount()). thenReturn(testCommentCount);
+        when(statisticsMock.postsCount()).thenReturn(testPostCount);
+        when(statisticsMock.commentsCount()).thenReturn(testCommentCount);
 
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
@@ -63,19 +63,19 @@ public class ForumStatisticsTestSuite {
     public void testMoreCommentsThanPosts() {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> testList = new ArrayList<String>();
-        for(int n=1; n<100; n++){
+        for (int n = 1; n < 100; n++) {
             testList.add("userName");
         }
         int testPostCount = 1000;
         int testCommentCount = 1500;
         when(statisticsMock.usersNames()).thenReturn(testList);
-        when(statisticsMock.postsCount()). thenReturn(testPostCount);
-        when(statisticsMock.commentsCount()). thenReturn(testCommentCount);
+        when(statisticsMock.postsCount()).thenReturn(testPostCount);
+        when(statisticsMock.commentsCount()).thenReturn(testCommentCount);
 
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statisticsMock);
-        double averageCommentsPerPost= statisticsCalculator.getAverageCommentsPerPost();
+        double averageCommentsPerPost = statisticsCalculator.getAverageCommentsPerPost();
 
         //Then
         Assert.assertEquals(1.5, averageCommentsPerPost, 0.01);
@@ -85,20 +85,20 @@ public class ForumStatisticsTestSuite {
     public void testMorePostsThanComments() {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> testList = new ArrayList<String>();
-        for(int n=1; n<100; n++){
+        for (int n = 1; n < 100; n++) {
             testList.add("userName");
         }
 
         int testPostCount = 2000;
         int testCommentCount = 1000;
         when(statisticsMock.usersNames()).thenReturn(testList);
-        when(statisticsMock.postsCount()). thenReturn(testPostCount);
-        when(statisticsMock.commentsCount()). thenReturn(testCommentCount);
+        when(statisticsMock.postsCount()).thenReturn(testPostCount);
+        when(statisticsMock.commentsCount()).thenReturn(testCommentCount);
 
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
         statisticsCalculator.calculateAdvStatistics(statisticsMock);
-        double averageCommentsPerPost= statisticsCalculator.getAverageCommentsPerPost();
+        double averageCommentsPerPost = statisticsCalculator.getAverageCommentsPerPost();
 
         //Then
         Assert.assertEquals(0.5, averageCommentsPerPost, 0.01);
@@ -109,14 +109,14 @@ public class ForumStatisticsTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> testList = new ArrayList<String>();
-        for(int n=1; n<100; n++){
+        for (int n = 1; n < 100; n++) {
             testList.add("userName");
         }
         int testPostCount = 1000;
         int testCommentsCount = 0;
         when(statisticsMock.usersNames()).thenReturn(testList);
-        when(statisticsMock.postsCount()). thenReturn(testPostCount);
-        when(statisticsMock.commentsCount()). thenReturn(testCommentsCount);
+        when(statisticsMock.postsCount()).thenReturn(testPostCount);
+        when(statisticsMock.commentsCount()).thenReturn(testCommentsCount);
 
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
@@ -134,14 +134,14 @@ public class ForumStatisticsTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> testList = new ArrayList<String>();
-        for(int n=1; n<100; n++){
+        for (int n = 1; n < 100; n++) {
             testList.add("userName");
         }
         int testPostCount = 0;
         int testCommentsCount = 1000;
         when(statisticsMock.usersNames()).thenReturn(testList);
-        when(statisticsMock.postsCount()). thenReturn(testPostCount);
-        when(statisticsMock.commentsCount()). thenReturn(testCommentsCount);
+        when(statisticsMock.postsCount()).thenReturn(testPostCount);
+        when(statisticsMock.commentsCount()).thenReturn(testCommentsCount);
 
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
@@ -155,18 +155,18 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testPostsFull(){
+    public void testPostsFull() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> testList = new ArrayList<String>();
-        for(int n=1; n<100; n++){
+        for (int n = 1; n < 100; n++) {
             testList.add("userName");
         }
         int testPostCount = 1000;
         int testCommentsCount = 1000;
         when(statisticsMock.usersNames()).thenReturn(testList);
-        when(statisticsMock.postsCount()). thenReturn(testPostCount);
-        when(statisticsMock.commentsCount()). thenReturn(testCommentsCount);
+        when(statisticsMock.postsCount()).thenReturn(testPostCount);
+        when(statisticsMock.commentsCount()).thenReturn(testCommentsCount);
 
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
         //When
@@ -179,5 +179,5 @@ public class ForumStatisticsTestSuite {
         Assert.assertEquals(10, averagePostPerUser, 0.2);
     }
 
-    }
+}
 

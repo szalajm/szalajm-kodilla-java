@@ -4,18 +4,18 @@ public class Circle implements Shape {
 
     private double radiusMilimeters;
 
-    public Circle(double radiusMilimeters){
-        this.radiusMilimeters=radiusMilimeters;
+    public Circle(double radiusMilimeters) {
+        this.radiusMilimeters = radiusMilimeters;
     }
 
-        public Object getShapeName() {
+    public Object getShapeName() {
         System.out.println("This is circle");
 
-            return null;
-        }
-
-        public void getField() {
-        System.out.println("The field equals:" + 3.14*radiusMilimeters*radiusMilimeters);
-        }
+        return null;
     }
+
+    public void getField() {
+        System.out.println("The field equals:" + 3.14 * radiusMilimeters * radiusMilimeters);
+    }
+}
 
