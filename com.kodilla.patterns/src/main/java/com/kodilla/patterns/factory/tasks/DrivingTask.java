@@ -5,6 +5,8 @@ public class DrivingTask implements Task {
     final String where;
     final String using;
 
+    private boolean taskStatus;
+
     public DrivingTask(String taskName, String where, String using) {
         this.taskName = taskName;
         this.where = where;
@@ -13,6 +15,7 @@ public class DrivingTask implements Task {
 
     public void executeTask(){
         System.out.println("go to: " + where + "by " + using);
+        taskStatus = true;
     }
 
     public String getTaskName(){
@@ -20,6 +23,6 @@ public class DrivingTask implements Task {
     }
 
     public boolean isTaskExecuted(){
-        return taskName.contains("achieved");
+        return taskStatus;
     }
 }
