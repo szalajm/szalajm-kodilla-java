@@ -1,12 +1,8 @@
-package com.kodilla.spring.com.kodilla.spring.library;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package com.kodilla.spring.library;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 public final class Library {
     private final List<String> books = new ArrayList<>();
     private LibraryDbController libraryDbController;

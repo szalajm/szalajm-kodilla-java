@@ -1,9 +1,6 @@
-package com.kodilla.spring.forum;
+package com.kodilla.spring;
 
-import com.kodilla.spring.com.kodilla.spring.shape.Circle;
-import com.kodilla.spring.com.kodilla.spring.shape.Shape;
-import com.kodilla.spring.com.kodilla.spring.shape.Square;
-import com.kodilla.spring.com.kodilla.spring.shape.Triangle;
+import com.kodilla.spring.shape.Shape;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
