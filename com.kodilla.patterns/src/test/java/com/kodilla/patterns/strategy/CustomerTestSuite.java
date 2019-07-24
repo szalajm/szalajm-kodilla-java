@@ -20,9 +20,9 @@ public class CustomerTestSuite {
         System.out.println("Kodilla should: " + kodillaShouldBuy);
 
         //Then
-        Assert.assertEquals("[Conservative predictor] Buy debentures of XYZ", stevenShouldBuy);
-        Assert.assertEquals("[Aggressive predictor] Buy stock of XYZ", johnShouldBuy);
-        Assert.assertEquals("[Balanced predictor] Buy shared units of Fund XYZ", kodillaShouldBuy);
+        Assert.assertEquals("[Balanced Predictor] buy stock of Fund XYZ", stevenShouldBuy);
+        Assert.assertEquals("[Conservative Predictor] buy XYZ treasures", johnShouldBuy);
+        Assert.assertEquals("[Aggresive predictor] Buy stock of XYZ", kodillaShouldBuy);
     }
 
     @Test
