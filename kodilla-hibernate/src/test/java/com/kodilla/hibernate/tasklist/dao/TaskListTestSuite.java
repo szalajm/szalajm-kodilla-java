@@ -30,6 +30,6 @@ public class TaskListTestSuite {
         //Then
         String listName = taskList.getListName();
         List <TaskList> readTaskList = taskListDao.findByListName(listName);
-        Assert.assertEquals(6, readTaskList.size());
+        Assert.assertEquals(7, readTaskList.size());
     }
 }
