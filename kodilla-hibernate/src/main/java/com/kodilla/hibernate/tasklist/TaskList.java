@@ -1,5 +1,7 @@
 package com.kodilla.hibernate.tasklist;
 
+import com.kodilla.hibernate.task.Task;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -9,6 +11,9 @@ public final class TaskList {
     private int id;
     private String listName;
     private String description;
+
+    public TaskList(){
+    }
 
     public TaskList(String listName, String description) {
         this.listName = listName;
