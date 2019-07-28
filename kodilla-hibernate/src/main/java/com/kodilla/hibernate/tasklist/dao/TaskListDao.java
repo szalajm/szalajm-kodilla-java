@@ -9,6 +9,6 @@ import java.util.List;
 
 @Transactional
 @Repository
-public interface TaskListDao extends CrudRepository<com.kodilla.hibernate.tasklist.TaskList, String> {
+public interface TaskListDao extends CrudRepository<com.kodilla.hibernate.tasklist.TaskList, Integer> {
     List<TaskList> findByListName(String listName);
 }
