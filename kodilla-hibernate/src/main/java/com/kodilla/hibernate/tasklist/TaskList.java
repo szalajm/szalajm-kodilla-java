@@ -10,8 +10,7 @@ public final class TaskList {
     private String listName;
     private String description;
 
-    public TaskList(int id, String listName, String description) {
-        this.id = id;
+    public TaskList(String listName, String description) {
         this.listName = listName;
         this.description = description;
     }
@@ -32,5 +31,17 @@ public final class TaskList {
     @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
+    }
+
+    private void setId(int id){
+        this.id = id;
+    }
+
+    private void setListName(String listName) {
+        this.listName = listName;
+    }
+
+    private void setDescription(String description){
+        this.description= description;
     }
 }

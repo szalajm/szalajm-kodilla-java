@@ -22,7 +22,7 @@ public class TaskListTestSuite {
     @Test
     public void testFindByListName(){
         //Given
-        TaskList taskList = new TaskList(1, LISTNAME, DESCRIPTION);
+        TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
 
         //When
         taskListDao.save(taskList);
