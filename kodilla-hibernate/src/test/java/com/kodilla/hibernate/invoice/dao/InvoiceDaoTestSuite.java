@@ -59,14 +59,14 @@ public class InvoiceDaoTestSuite {
         //When
         invoiceDao.save(invoice);
         List<Item> resultList = invoice.getItems();
-        int id = invoice.getId();
+        int idToRemove = invoice.getId();
 
         //Then
         try {
         Assert.assertEquals(4, resultList.size());
 
     } finally {
-            invoiceDao.deleteById(id);
+            invoiceDao.deleteById(idToRemove);
         }
         }
 
