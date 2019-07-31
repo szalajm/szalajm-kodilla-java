@@ -18,6 +18,7 @@ public class Employee {
     private String lastname;
     private List<Company> companies = new ArrayList<>();
 
+    //dopisac po @Manytomany
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "JOIN_COMPANY_EMPLOYEE",
