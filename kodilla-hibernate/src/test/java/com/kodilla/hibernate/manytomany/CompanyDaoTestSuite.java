@@ -112,22 +112,17 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, kovalskyList.size());
         Assert.assertEquals(1, datList.size());
 
-        //CleanUp
-        //try {
-        //    companyDao.deleteById(softwareMachineId);
-        //    companyDao.deleteById(dataMaestersId);
-        //    companyDao.deleteById(greyMatterId);
-        //employeeDao.deleteById(smithId);
-        //employeeDao.deleteById(clarksonId);
-        //employeeDao.deleteById(kovalskyId);
-        //} catch (Exception e) {
-        //    //do nothing
-        //}
+        //Clean up
+        try {
+          companyDao.deleteById(softwareMachineId);
+          companyDao.deleteById(dataMasterId);
+          companyDao.deleteById(greyMatterId);
+          employeeDao.deleteById(smithId);
+          employeeDao.deleteById(clarksonId);
+          employeeDao.deleteById(kovalskyId);
+        } catch (Exception e) {
 
-
-
-
-
+        }
 
     }
 }

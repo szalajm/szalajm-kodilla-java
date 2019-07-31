@@ -8,7 +8,7 @@ import java.util.List;
 @NamedNativeQuery(
         name = "Company.retrieveCompaniesWithNameStartingWith",
         query = "SELECT * FROM COMPANIES" +
-                "WHERE LEFT(NAME, 3) == PATTERN"
+                " WHERE LEFT(COMPANY_NAME, 3) = :PATTERN"
 )
 
 @Entity
