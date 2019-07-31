@@ -113,6 +113,7 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, datList.size());
 
         //Clean up
+        //
         try {
           companyDao.deleteById(softwareMachineId);
           companyDao.deleteById(dataMasterId);
