@@ -1,5 +1,7 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.springframework.stereotype.Service;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -11,6 +13,12 @@ import java.util.List;
                 " WHERE LEFT(COMPANY_NAME, 3) = :PATTERN"
 )
 
+@NamedQuery(
+        name="Company.retrieveCompaniesWithNameConsisting",
+        query = "FROM Company WHERE name like :ARG"
+)
+
+@Service
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
