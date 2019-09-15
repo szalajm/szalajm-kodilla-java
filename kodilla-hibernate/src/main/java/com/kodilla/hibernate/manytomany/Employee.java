@@ -14,7 +14,7 @@ import java.util.List;
                 ),
                 @NamedQuery(
                        name = "Employee.retriveEmployeesOfLastnameConsisting",
-                        query = "FROM Employee WHERE lastname LIKE :ARG"
+                        query = "FROM Employee WHERE lastname LIKE :%ARG%"
                 )
         })
 

@@ -15,7 +15,7 @@ import java.util.List;
 
 @NamedQuery(
         name="Company.retrieveCompaniesWithNameConsisting",
-        query = "FROM Company WHERE name like :ARG"
+        query = "FROM Company WHERE name like :%ARG%"
 )
 
 @Service
