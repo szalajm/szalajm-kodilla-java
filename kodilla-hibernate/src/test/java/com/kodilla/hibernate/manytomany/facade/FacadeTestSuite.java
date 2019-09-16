@@ -4,11 +4,14 @@ import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
 import com.kodilla.hibernate.manytomany.dao.CompanyDao;
 import com.kodilla.hibernate.manytomany.dao.EmployeeDao;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -32,30 +35,53 @@ public class FacadeTestSuite {
         companyDao.save(dataMaesters);
         companyDao.save(greyMatter);
 
+        int softwareMachineId = softwareMachine.getId();
+        int dataMasterId = dataMaesters.getId();
+        int greyMatterId = greyMatter.getId();
+
+        List<Company> result = companyDao.retrieveCompaniesWithNameConsisting("rey");
+
         //Then
+        Assert.assertEquals(1, result.size());
+
+        //Clean up
         try {
-            manytomanyFacade.processCompanyQuery("data");
-        } catch (QueryProcessingException e) {
+            companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMasterId);
+            companyDao.deleteById(greyMatterId);
+        } catch (Exception o) {
+
         }
     }
 
-        @Test
-        public void testEMployeeQuery(){
-            //Given
-            Employee johnSmith = new Employee("John", "Smith");
-            Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
-            Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
+    @Test
+    public void testEMployeeQuery() {
+        //Given
+        Employee johnSmith = new Employee("John", "Smith");
+        Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
+        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
 
-            //When
-            employeeDao.save(johnSmith);
-            employeeDao.save(stephanieClarckson);
-            employeeDao.save(lindaKovalsky);
+        //When
+        employeeDao.save(johnSmith);
+        employeeDao.save(stephanieClarckson);
+        employeeDao.save(lindaKovalsky);
 
-            //Then
-            try {
-                manytomanyFacade.processEmployeeQuery("smi");
-            } catch (QueryProcessingException e) {
-            }
+        int smithId = johnSmith.getId();
+        int clarksonId = stephanieClarckson.getId();
+        int kovalskyId = lindaKovalsky.getId();
+
+        List<Employee> result = employeeDao.retriveEmployeesOfLastnameConsisting("mit");
+
+        //Then
+        Assert.assertEquals(1, result.size());
+
+        //Clean up
+        try {
+            employeeDao.deleteById(smithId);
+            employeeDao.deleteById(clarksonId);
+            employeeDao.deleteById(kovalskyId);
+        } catch (Exception o) {
         }
     }
+}
 

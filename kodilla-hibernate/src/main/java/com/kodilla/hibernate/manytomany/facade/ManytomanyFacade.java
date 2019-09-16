@@ -24,7 +24,7 @@ public class ManytomanyFacade {
 
     private static final Logger LOGGER= LoggerFactory.getLogger(ManytomanyFacade.class);
 
-    public void processEmployeeQuery(String arg) throws QueryProcessingException{
+    public List<Employee> processEmployeeQuery(String arg) throws QueryProcessingException{
         List<Employee> result = employeeDao.retriveEmployeesOfLastnameConsisting(arg);
         LOGGER.info("Browsing for employees whose lastnames include: " + arg);
         if(result.isEmpty()){
@@ -32,9 +32,10 @@ public class ManytomanyFacade {
             throw new QueryProcessingException(QueryProcessingException.ERR_EMPLOYEE_NOTFOUND);
         }
         LOGGER.info("Employees You are searching for are: " + result);
+        return result;
     }
 
-    public void processCompanyQuery(String arg) throws QueryProcessingException{
+    public List<Company>  processCompanyQuery(String arg) throws QueryProcessingException{
         List<Company> result = companyDao.retrieveCompaniesWithNameConsisting(arg);
         LOGGER.info("Browsing for companies whose names include: " + arg);
         if(result.isEmpty()){
@@ -42,5 +43,6 @@ public class ManytomanyFacade {
             throw new QueryProcessingException(QueryProcessingException.ERR_COMPANY_NOTFOUND);
         }
         LOGGER.info("Companies You are searching for are: " + result);
+        return result;
     }
 }
