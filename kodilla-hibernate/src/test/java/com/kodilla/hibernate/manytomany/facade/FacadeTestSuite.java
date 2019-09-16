@@ -39,7 +39,7 @@ public class FacadeTestSuite {
         int dataMasterId = dataMaesters.getId();
         int greyMatterId = greyMatter.getId();
 
-        List<Company> result = companyDao.retrieveCompaniesWithNameConsisting("rey");
+        List<Company> result = companyDao.retrieveCompaniesWithNameConsisting("%dat%");
 
         //Then
         Assert.assertEquals(1, result.size());
@@ -70,7 +70,7 @@ public class FacadeTestSuite {
         int clarksonId = stephanieClarckson.getId();
         int kovalskyId = lindaKovalsky.getId();
 
-        List<Employee> result = employeeDao.retriveEmployeesOfLastnameConsisting("mit");
+        List<Employee> result = employeeDao.retriveEmployeesOfLastnameConsisting("%mit%");
 
         //Then
         Assert.assertEquals(1, result.size());
