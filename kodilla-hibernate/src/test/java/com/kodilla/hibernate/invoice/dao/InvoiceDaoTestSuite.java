@@ -62,14 +62,16 @@ public class InvoiceDaoTestSuite {
         int idToRemove = invoice.getId();
 
         //Then
-        try {
         Assert.assertEquals(4, result.size());
 
-         //Deleting
+         //Clean up
 
-    } finally {
+        try {
             invoiceDao.deleteById(idToRemove);
+        } catch (Exception e) {
+            //do nothing
+        }
         }
         }
 
-}
+

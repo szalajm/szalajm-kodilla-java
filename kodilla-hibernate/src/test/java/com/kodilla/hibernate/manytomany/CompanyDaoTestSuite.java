@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class CompanyDaoTestSuite {
     EmployeeDao employeeDao;
 
     @Test
-    public void testSaveManyToMany(){
+    public void testSaveManyToMany() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -66,7 +67,7 @@ public class CompanyDaoTestSuite {
     }
 
     @Test
-    public void testQueries(){
+    public void testQueries() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -98,7 +99,7 @@ public class CompanyDaoTestSuite {
 
         int softwareMachineId = softwareMachine.getId();
         int dataMasterId = dataMaesters.getId();
-        int greyMatterId= greyMatter.getId();
+        int greyMatterId = greyMatter.getId();
 
         int smithId = johnSmith.getId();
         int clarksonId = stephanieClarckson.getId();
@@ -106,25 +107,26 @@ public class CompanyDaoTestSuite {
 
         // When
         List<Employee> kovalskyList = employeeDao.retrieveEmployeesOfCertainLastname("Kovalsky");
-        List<Company>  datList = companyDao.retrieveCompaniesWithNameStartingWith("dat");
+        List<Company> datList = companyDao.retrieveCompaniesWithNameStartingWith("dat");
 
         //Then
         Assert.assertEquals(1, kovalskyList.size());
         Assert.assertEquals(1, datList.size());
 
         //Clean up
-        //
         try {
-          companyDao.deleteById(softwareMachineId);
-          companyDao.deleteById(dataMasterId);
-          companyDao.deleteById(greyMatterId);
-          employeeDao.deleteById(smithId);
-          employeeDao.deleteById(clarksonId);
-          employeeDao.deleteById(kovalskyId);
-        } catch (Exception e) {
 
+            companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMasterId);
+            companyDao.deleteById(greyMatterId);
+            employeeDao.deleteById(smithId);
+            employeeDao.deleteById(clarksonId);
+            employeeDao.deleteById(kovalskyId);
+
+        } catch (EmptyResultDataAccessException ex) {
+            //do nothing
         }
-
     }
 }
+
 

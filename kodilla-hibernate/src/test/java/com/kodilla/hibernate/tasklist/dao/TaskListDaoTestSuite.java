@@ -41,22 +41,6 @@ public class TaskListDaoTestSuite {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Test
     public void testTaskListDaoSaveWithTasks() {
         //Given
@@ -80,6 +64,6 @@ public class TaskListDaoTestSuite {
         Assert.assertNotEquals(0, id);
 
         //CleanUp
-        //taskListDao.deleteById(id);
+        taskListDao.deleteById(id);
     }
 }
