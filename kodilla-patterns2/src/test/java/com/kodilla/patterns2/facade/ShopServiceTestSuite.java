@@ -1,21 +1,13 @@
 package com.kodilla.patterns2.facade;
 
-import com.kodilla.patterns2.facade.ShopService;
-import com.kodilla.patterns2.facade.api.ItemDto;
-import com.kodilla.patterns2.facade.api.OrderDto;
+import com.kodilla.patterns2.facade.dao.ItemDto;
+import com.kodilla.patterns2.facade.dao.OrderDto;
 import com.kodilla.patterns2.facade.api.OrderFacade;
 import com.kodilla.patterns2.facade.api.OrderProcessingException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.internal.matchers.Or;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;

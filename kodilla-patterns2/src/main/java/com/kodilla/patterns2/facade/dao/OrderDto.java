@@ -1,4 +1,6 @@
-package com.kodilla.patterns2.facade.api;
+package com.kodilla.patterns2.facade.dao;
+
+import com.kodilla.patterns2.facade.dao.ItemDto;
 
 import java.util.ArrayList;
 import java.util.List;
