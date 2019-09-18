@@ -1,5 +1,6 @@
 package com.kodilla.patterns2.facade.dao;
 
+import com.sun.istack.internal.NotNull;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -22,7 +23,7 @@ public class FacadeWatcher {
 
     @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))" +
             "&& args(theOrder, userId) && target(object)")
-    public void logEvent(OrderDto theOrder, Long userId, Object object){
+    public void logEvent(OrderDto theOrder, Long userId, @NotNull Object object){
         LOGGER.info("Class:" + object.getClass().getName() + ", Args:" + theOrder + ", " + userId);
     }
 
