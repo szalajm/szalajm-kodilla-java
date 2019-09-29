@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DbManagerTestSuite {
+/*public class DbManagerTestSuite {
     @Test
     public void testConnect() throws SQLException {
         //Given
@@ -65,4 +65,4 @@ public class DbManagerTestSuite {
         Assert.assertEquals(2, counter);
         }
     }
-
+*/

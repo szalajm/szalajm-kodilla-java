@@ -37,9 +37,10 @@ public class TaskDaoTestSuite {
         //CleanUp
         taskDao.deleteById(id);
     }
+}
 
 
-    @Test
+    /*@Test
     public void testTaskDaoFindByDuration() {
         //Given
         Task task = new Task(DESCRIPTION, 7);
@@ -75,3 +76,4 @@ public class TaskDaoTestSuite {
     }
 
 }
+     */

@@ -13,9 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class FacadeTestSuite {
+// @RunWith(SpringRunner.class)
+//@SpringBootTest
+/* public class FacadeTestSuite {
     @Autowired
     private EmployeeDao employeeDao;
     @Autowired
@@ -91,4 +91,4 @@ public class FacadeTestSuite {
         //}
     }
 }
-
+*/
