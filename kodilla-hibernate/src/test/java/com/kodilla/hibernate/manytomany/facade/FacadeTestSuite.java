@@ -13,9 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-// @RunWith(SpringRunner.class)
-//@SpringBootTest
-/* public class FacadeTestSuite {
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class FacadeTestSuite {
     @Autowired
     private EmployeeDao employeeDao;
     @Autowired
@@ -49,13 +49,13 @@ import java.util.List;
         companyDao.deleteById(maszynaDanychId);
         companyDao.deleteById(centrumPomyslowosciId);
         companyDao.deleteById(czarnaDziuraId);
-        //try {
-          //  companyDao.deleteById(softwareMachineId);
-            //companyDao.deleteById(dataMasterId);
-            //companyDao.deleteById(greyMatterId);
-        //} catch (Exception o) {
+        try {
+            companyDao.deleteById(maszynaDanychId);
+            companyDao.deleteById(centrumPomyslowosciId);
+            companyDao.deleteById(czarnaDziuraId);
+        } catch (Exception o) {
 
-        //}
+        }
     }
 
     @Test
@@ -83,12 +83,13 @@ import java.util.List;
         employeeDao.deleteById(kowalskiId);
         employeeDao.deleteById(klarysewiczId);
         employeeDao.deleteById(kownackaId);
-        //try {
-          //  employeeDao.deleteById(smithId);
-            //employeeDao.deleteById(clarksonId);
-            //employeeDao.deleteById(kovalskyId);
-        //} catch (Exception o) {
-        //}
+        try {
+            employeeDao.deleteById(kowalskiId);
+            employeeDao.deleteById(klarysewiczId);
+            employeeDao.deleteById(kownackaId);
+        } catch (Exception o) {
+        }
     }
 }
-*/
+
+
