@@ -1,4 +1,4 @@
-package com.kodilla.patterns2.facade;
+/**package com.kodilla.patterns2.facade;
 
 import com.kodilla.patterns2.facade.dao.ItemDto;
 import com.kodilla.patterns2.facade.dao.OrderDto;
@@ -80,3 +80,4 @@ public class ShopServiceTestSuite {
     }
 }
 
+*/

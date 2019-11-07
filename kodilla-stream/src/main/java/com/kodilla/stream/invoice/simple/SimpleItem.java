@@ -10,6 +10,7 @@ public final class SimpleItem {
     }
 
     public SimpleProduct getProduct() {
+
         return product;
     }
 
